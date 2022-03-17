@@ -11,9 +11,14 @@ jobs:
   test:
     working_directory: ~/circleci-python
     docker:
-      - image: "circleci/python:3.10"
+      - image: "circleci/python:3.10.2"
     steps:
       - checkout
+      - name: install dependencies
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -r requirements.txt
       - run: python3 main.py
 
 workflows:
