@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
 import time
 import smtplib
 import os
@@ -7,8 +8,8 @@ import os
 THRESHOLD_PRICE = 80
 my_email = os.environ.get("EMAIL")
 my_password = os.environ.get("PASSWORD")
-# chrome_driver_path = "C:\SeleniumDrivers\chromedriver.exe"
-chrome_driver_path = "/usr/local/bin/chromedriver"
+# chrome_driver_path = "C:\SeleniumDrivers\chromedriver.exe" # local driver
+chrome_driver_path = Service("/usr/local/bin/chromedriver") # circleci driver.
 driver = webdriver.Chrome(chrome_driver_path)
 
 driver.maximize_window()
