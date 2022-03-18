@@ -36,7 +36,7 @@ jobs:
       - run:
           name: run main
           # This assumes pytest is installed via the install-package step above
-          command:
+          command: |
             google-chrome --version
             chromedriver --version
             python main.py
