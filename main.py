@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
 import time
 import smtplib
 import os
@@ -8,9 +9,12 @@ import os
 THRESHOLD_PRICE = 80
 my_email = os.environ.get("EMAIL")
 my_password = os.environ.get("PASSWORD")
-# chrome_driver_path = "C:\SeleniumDrivers\chromedriver.exe" # local driver
-chrome_driver_path = Service("/usr/local/bin/chromedriver") # circleci driver.
-driver = webdriver.Chrome(service=chrome_driver_path)
+options = Options()
+options.add_argument('--headless')
+options.add_argument('--disable-gpu')
+chrome_driver_path = Service("C:\SeleniumDrivers\chromedriver.exe") # local driver
+#chrome_driver_path = Service("/usr/local/bin/chromedriver") # circleci driver.
+driver = webdriver.Chrome(service= chrome_driver_path, chrome_options=options)
 
 driver.maximize_window()
 driver.get(url="https://www.amazon.com/Horizon-Forbidden-West-Launch-PlayStation-5/dp/B09FBL24D5/ref=sr_1_1?keywords=forbidden+west+ps5&qid=1647360494&sprefix=forbi%2Caps%2C141&sr=8-1")
