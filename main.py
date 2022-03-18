@@ -10,7 +10,7 @@ my_email = os.environ.get("EMAIL")
 my_password = os.environ.get("PASSWORD")
 # chrome_driver_path = "C:\SeleniumDrivers\chromedriver.exe" # local driver
 chrome_driver_path = Service("/usr/local/bin/chromedriver") # circleci driver.
-driver = webdriver.Chrome(chrome_driver_path)
+driver = webdriver.Chrome(service=chrome_driver_path)
 
 driver.maximize_window()
 driver.get(url="https://www.amazon.com/Horizon-Forbidden-West-Launch-PlayStation-5/dp/B09FBL24D5/ref=sr_1_1?keywords=forbidden+west+ps5&qid=1647360494&sprefix=forbi%2Caps%2C141&sr=8-1")
