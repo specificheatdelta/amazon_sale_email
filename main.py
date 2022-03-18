@@ -8,6 +8,7 @@ THRESHOLD_PRICE = 80
 my_email = os.environ.get("EMAIL")
 my_password = os.environ.get("PASSWORD")
 chrome_driver_path = "C:\SeleniumDrivers\chromedriver.exe"
+# chrome_driver_path = "user/"
 driver = webdriver.Chrome(chrome_driver_path)
 
 driver.maximize_window()
