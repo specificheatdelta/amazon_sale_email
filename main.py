@@ -6,7 +6,7 @@ import time
 import smtplib
 import os
 
-THRESHOLD_PRICE = 80
+THRESHOLD_PRICE = 40
 my_email = os.environ.get("EMAIL")
 my_password = os.environ.get("PASSWORD")
 options = Options()
@@ -20,7 +20,7 @@ driver.maximize_window()
 driver.get(url="https://www.amazon.com/Horizon-Forbidden-West-Launch-PlayStation-5/dp/B09FBL24D5/ref=sr_1_1?keywords=forbidden+west+ps5&qid=1647360494&sprefix=forbi%2Caps%2C141&sr=8-1")
 # price = driver.find_element_by_id("priceblock_ourprice")
 price = driver.find_element(by="id", value="priceblock_ourprice")
-print(price.text)
+# print(price.text)
 game_price_float = float(price.text.split("$")[1])
 print(game_price_float)
 search_bar = driver.find_element(by="id",value="twotabsearchtextbox")
