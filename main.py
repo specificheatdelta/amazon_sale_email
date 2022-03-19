@@ -12,7 +12,7 @@ my_password = os.environ.get("PASSWORD")
 options = Options()
 options.add_argument('--headless')
 options.add_argument('--disable-gpu')
-#chrome_driver_path = Service("C:\SeleniumDrivers\chromedriver.exe") # local driver
+# chrome_driver_path = Service("C:\SeleniumDrivers\chromedriver.exe") # local driver
 chrome_driver_path = Service("/usr/local/bin/chromedriver") # circleci driver.
 driver = webdriver.Chrome(service= chrome_driver_path, chrome_options=options)
 
@@ -37,7 +37,7 @@ if game_price_float <= THRESHOLD_PRICE:
                             msg=f"Subject: Forbidden West Amazon Deal!!\n\n"
                                 f"Horizon Forbidden West deal for ${game_price_float} now!")
 
-print("Email Sent")
+    print("Email Sent")
 # driver.find_element(By.CSS_SELECTOR, '#landingImage').click()
 # time.sleep(2)
 # driver.find_element(By.CSS_SELECTOR, '#a-popover-5 > div > header > button > i').click()
