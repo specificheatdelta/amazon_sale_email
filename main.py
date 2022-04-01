@@ -21,6 +21,10 @@ url_list = [{'name':'Amazon',
              'url':'https://www.target.com/p/horizon-forbidden-west-launch-edition-playstation-5/-/A-84290221?ref=tgt_adv_XS000000&AFID=google_pla_df&fndsrc=tgtao&DFA=71700000014844932&CPNG=PLA_Video%2BGames%2BShopping_Brand%7CVideo%2BGames_Ecomm_Hardlines&adgroup=SC_Video%2BGames&LID=700000001170770pgs&LNM=PRODUCT_GROUP&network=g&device=c&location=9033288&targetid=aud-1453399007976:pla-64523595581&ds_rl=1246978&ds_rl=1248099&gclid=Cj0KCQjw_4-SBhCgARIsAAlegrVEDAIbsz_0IVX0iFG0PFqLEepiV6VoTM08moUQKn6G4SdYdfdWP7kaAmlgEALw_wcB&gclsrc=aw.ds',
              'search_by':'class name',
              'element_value':'style__PriceFontSize-sc-1o3i6gc-0'},
+            {'name':'Best_Buy',
+             'url':'https://www.bestbuy.com/site/horizon-forbidden-west-launch-edition-playstation-5/6479468.p?skuId=6479468',
+             'search_by':'xpath',
+             'element_value':'/html/body/div[3]/main/div[2]/div[3]/div[2]/div/div/div[1]/div/div/div/div/div/div[1]/div/div/div/span[1]'},
             ]
 
 for url in url_list:
