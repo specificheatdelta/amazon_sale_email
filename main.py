@@ -24,7 +24,7 @@ url_list = [{'name':'Amazon',
             {'name':'Best_Buy',
              'url':'https://www.bestbuy.com/site/horizon-forbidden-west-launch-edition-playstation-5/6479468.p?skuId=6479468',
              'search_by':'xpath',
-             'element_value':'/html/body/div[3]/main/div[2]/div[3]/div[2]/div/div/div[1]/div/div/div/div/div/div[1]/div/div/div/span[1]'},
+             'element_value':'/html/body/div[3]/main/div[2]/div[3]/div[2]/div/div/div[1]/div/div/div/div/div/div[1]/div/div/div/span[1]'}
             ]
 
 for url in url_list:
